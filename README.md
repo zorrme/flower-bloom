@@ -1,44 +1,65 @@
-# Astro Starter Kit: Minimal
+# Bloom — For Flower Lovers
 
-```sh
-npm create astro@latest -- --template minimal
+A premium Astro landing page with Awwwards-tier design: floating pill navigation, editorial typography, asymmetric bento grid, film grain overlay, blur-up scroll reveals, and automatic dark mode.
+
+**Live:** https://zorrme.github.io/flower-bloom/
+
+## Tech Stack
+
+- **Astro 7.1.1** — Static site generation
+- **Vanilla CSS** — Custom properties, no framework
+- **Vanilla JS** — IntersectionObserver scroll reveals
+- **GitHub Actions** — CI/CD to GitHub Pages
+
+## Quick Start
+
+```bash
+npm install
+npm run dev        # → http://localhost:4321
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-## 🚀 Project Structure
+| Command | Action |
+|---------|--------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at localhost:4321 |
+| `npm run build` | Build production site to `dist/` |
+| `npm run preview` | Preview production build locally |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── layouts/Layout.astro       # Base HTML + all global CSS
+├── components/
+│   ├── Nav.astro              # Floating pill navigation
+│   ├── Hero.astro             # Editorial split hero section
+│   ├── Marquee.astro          # Infinite flower name scroll
+│   ├── Features.astro         # Asymmetric bento grid
+│   ├── Gallery.astro          # Image gallery section
+│   ├── Testimonials.astro     # Testimonial cards
+│   ├── CTA.astro              # Email signup section
+│   ├── Footer.astro           # Footer with links
+│   └── ScrollReveal.astro     # Scroll animation logic
+└── pages/index.astro          # Main page
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Design Features
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Floating pill navigation** with glassmorphism effect
+- **Cormorant Garamond + Plus Jakarta Sans** typography pairing
+- **Asymmetric bento grid** with double-bezel cards
+- **Film grain overlay** via SVG noise texture
+- **Blur-up scroll reveals** with IntersectionObserver
+- **Dark mode** via `prefers-color-scheme` media query
+- **Custom easing curves** for premium motion
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Deployment
 
-## 🧞 Commands
+Push to `main` triggers automatic deployment via GitHub Actions.
 
-All commands are run from the root of the project, from a terminal:
+## Documentation
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
+- [Design System](design.md) — Colors, typography, spacing, motion
+- [Architecture](architecture.md) — Technical structure and build pipeline
